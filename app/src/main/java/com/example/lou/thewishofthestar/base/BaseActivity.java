@@ -16,6 +16,8 @@ public abstract class  BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         App.context = this;
         setContentView(getLayout());
+        init();
+        initLoad();
     }
 
     protected abstract int getLayout();
@@ -36,16 +38,17 @@ public abstract class  BaseActivity extends AppCompatActivity {
         if(fragment==null){
             try {
                 fragment = fragmentClass.newInstance();
+                transaction.add(R.id.home_frame,fragment,simpleName);
             } catch (InstantiationException e) {
                 e.printStackTrace();
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             }
 
-            transaction.add(R.id.home_frame,fragment,simpleName);
+
         }
 
-        if(lastFragment==null){
+        if(lastFragment!=null){
             transaction.hide(lastFragment);
         }
         transaction.show(fragment);

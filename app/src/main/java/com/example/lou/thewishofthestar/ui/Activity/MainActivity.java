@@ -8,7 +8,11 @@ import android.widget.RadioGroup;
 
 import com.example.lou.thewishofthestar.R;
 import com.example.lou.thewishofthestar.base.BaseActivity;
+import com.example.lou.thewishofthestar.ui.Fragment.MineFragment;
+import com.example.lou.thewishofthestar.ui.Fragment.ProphesyFragment;
 import com.example.lou.thewishofthestar.ui.Fragment.TeacherFragment;
+import com.example.lou.thewishofthestar.ui.Fragment.ValuableBookFragment;
+import com.example.lou.thewishofthestar.ui.Fragment.WokerFragment;
 
 
 public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener {
@@ -56,19 +60,19 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
                 break;
             case R.id.home_woker_btn:
                 setBtnTextColor(home_woker_btn);
-                setContentView(TeacherFragment.class);
+                setContentView(WokerFragment.class);
                 break;
             case R.id.home_book_btn:
                 setBtnTextColor(home_book_btn);
-                setContentView(TeacherFragment.class);
+                setContentView(ValuableBookFragment.class);
                 break;
             case R.id.home_yugao_btn:
                 setBtnTextColor(home_yugao_btn);
-                setContentView(TeacherFragment.class);
+                setContentView(ProphesyFragment.class);
                 break;
             case R.id.home_mine_btn:
                 setBtnTextColor(home_mine_btn);
-                setContentView(TeacherFragment.class);
+                setContentView(MineFragment.class);
                 break;
         }
     }
@@ -76,7 +80,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     private void setBtnTextColor(RadioButton home_teacher_btn) {
         home_teacher_btn.setTextColor(Color.parseColor("#4169E1"));
         if(lastRadion!=null){
-            lastRadion.setTextColor(Color.parseColor("#000000"));
+            lastRadion.setTextColor(Color.parseColor("#c3c3c3"));
         }
         lastRadion = home_teacher_btn;
     }
