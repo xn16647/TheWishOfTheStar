@@ -6,6 +6,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
+import com.example.lou.thewishofthestar.R;
+
 public abstract class  BaseActivity extends AppCompatActivity {
 
     private BaseFragment lastFragment;
@@ -22,7 +24,7 @@ public abstract class  BaseActivity extends AppCompatActivity {
 
     protected abstract void initLoad();
 
-    public void setContentView(int container,Class<? extends BaseFragment> fragmentClass){
+    public void setContentView(Class<? extends BaseFragment> fragmentClass){
         //获取fragment管理器
         FragmentManager manager = getSupportFragmentManager();
         //获取操作fragment的容器
@@ -40,7 +42,7 @@ public abstract class  BaseActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-            transaction.add(fragment,simpleName);
+            transaction.add(R.id.home_frame,fragment,simpleName);
         }
 
         if(lastFragment==null){

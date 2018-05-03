@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent">`
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,83 +21,107 @@
         android:layout_height="0dp">
 
     </FrameLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c3c3c3"
+        >
+
+    </View>
 
     <RadioGroup
+        android:id="@+id/radiogroup"
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        android:layout_height="50dp">
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        >
 
         <RadioButton
+            android:id="@+id/home_teacher_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/myselector"
+            android:gravity="center"
+            android:textColor="#c3c3c3"
+            android:textSize="10sp"
+            android:fontFamily="sans-serif-thin"
+            android:text="名师" />
+
+        <RadioButton
+            android:id="@+id/home_woker_btn"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textColor="#c3c3c3"
+            android:layout_width="0dp"
+            android:button="@null"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/myselector1"
+            android:text="作业"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:fontFamily="sans-serif-thin"
+            android:layout_height="match_parent" />
+
+        <RadioButton
+            android:id="@+id/home_book_btn"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="#c3c3c3"
+            android:layout_marginRight="15dp"
+            android:layout_width="0dp"
+            android:button="@null"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/myselector2"
+            android:text="宝典"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:fontFamily="sans-serif-thin"
+            android:layout_height="match_parent" />
+
+        <RadioButton
+            android:id="@+id/home_yugao_btn"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_width="0dp"
             android:button="@null"
+            android:textColor="#c3c3c3"
             android:layout_weight="1"
-            android:drawableTop="@mipmap/home_master_active"
-            android:text="名师"
+            android:drawableTop="@drawable/myselector3"
+            android:text="预告"
             android:gravity="center"
+            android:textSize="10sp"
+            android:fontFamily="sans-serif-thin"
             android:layout_height="match_parent" />
 
         <RadioButton
+            android:id="@+id/home_mine_btn"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_width="0dp"
+            android:textColor="#c3c3c3"
             android:button="@null"
             android:layout_weight="1"
-            android:drawableTop="@mipmap/home_master_active"
-            android:text="名师"
+            android:drawableTop="@drawable/myselector4"
+            android:text="我的"
             android:gravity="center"
+            android:textSize="10sp"
+            android:fontFamily="sans-serif-thin"
             android:layout_height="match_parent" />
-
-        <RadioButton
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_width="0dp"
-            android:button="@null"
-            android:layout_weight="1"
-            android:drawableTop="@mipmap/home_master_active"
-            android:text="名师"
-            android:gravity="center"
-            android:layout_height="match_parent" />
-
-        <RadioButton
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_width="0dp"
-            android:button="@null"
-            android:layout_weight="1"
-            android:drawableTop="@mipmap/home_master_active"
-            android:text="名师"
-            android:gravity="center"
-            android:layout_height="match_parent" />
-
-        <RadioButton
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_width="0dp"
-            android:button="@null"
-            android:layout_weight="1"
-            android:drawableTop="@mipmap/home_master_active"
-            android:text="名师"
-            android:gravity="center"
-            android:layout_height="match_parent" />
-
-
-
-
-
-
-
 
     </RadioGroup>
 
