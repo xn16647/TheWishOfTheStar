@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 
 import com.example.lou.thewishofthestar.R;
 import com.example.lou.thewishofthestar.base.BaseFragment;
+import com.example.lou.thewishofthestar.ui.Activity.MainActivity;
 
 public class MineFragment extends BaseFragment{
 
@@ -37,4 +38,15 @@ public class MineFragment extends BaseFragment{
 
     }
 
+    @Override
+    public void onHiddenChanged(boolean hidden) {
+        super.onHiddenChanged(hidden);
+        if(hidden){
+            ((MainActivity)getActivity()).title_liner.setVisibility(View.VISIBLE);
+            ((MainActivity)getActivity()).myselt_head.setVisibility(View.GONE);
+        }else {
+            ((MainActivity)getActivity()).title_liner.setVisibility(View.GONE);
+            ((MainActivity)getActivity()).myselt_head.setVisibility(View.VISIBLE);
+        }
+    }
 }

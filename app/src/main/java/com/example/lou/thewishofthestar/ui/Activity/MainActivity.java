@@ -2,7 +2,10 @@ package com.example.lou.thewishofthestar.ui.Activity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -26,6 +29,8 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     private RadioButton home_mine_btn;
     private RadioGroup radioGroup;
     private RadioButton lastRadion;
+    public ImageView myselt_head;
+    public LinearLayout title_liner;
 
     @Override
     protected int getLayout() {
@@ -43,6 +48,8 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         home_yugao_btn = (RadioButton) findViewById(R.id.home_yugao_btn);
         home_mine_btn = (RadioButton) findViewById(R.id.home_mine_btn);
         radioGroup.setOnCheckedChangeListener(this);
+        myselt_head = findViewById(R.id.myselt_head);
+        title_liner = findViewById(R.id.title_liner);
 
     }
 
@@ -53,7 +60,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
 
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
-        switch (group.getCheckedRadioButtonId()){
+        switch (group.getCheckedRadioButtonId()) {
             case R.id.home_teacher_btn:
                 setBtnTextColor(home_teacher_btn);
                 setContentView(TeacherFragment.class);
@@ -71,6 +78,8 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
                 setContentView(ProphesyFragment.class);
                 break;
             case R.id.home_mine_btn:
+                myselt_head.setVisibility(View.VISIBLE);
+                title_liner.setVisibility(View.GONE);
                 setBtnTextColor(home_mine_btn);
                 setContentView(MineFragment.class);
                 break;
@@ -79,7 +88,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
 
     private void setBtnTextColor(RadioButton home_teacher_btn) {
         home_teacher_btn.setTextColor(Color.parseColor("#4169E1"));
-        if(lastRadion!=null){
+        if (lastRadion != null) {
             lastRadion.setTextColor(Color.parseColor("#c3c3c3"));
         }
         lastRadion = home_teacher_btn;

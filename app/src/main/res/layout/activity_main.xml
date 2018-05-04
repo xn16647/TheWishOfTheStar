@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent">`
 
+    <ImageView
+        android:layout_alignParentTop="true"
+        android:id="@+id/myselt_head"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:src="@mipmap/myself_head_bg"
+        android:layout_height="200dp"/>
+
     <LinearLayout
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/title_liner"
         android:layout_width="match_parent"
         android:background="#00000000"
-        android:layout_height="50dp">
+        android:layout_height="40dp">
 
         <ImageView
             android:layout_marginLeft="5dp"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="50dp"
             android:src="@mipmap/title_logo"/>
 
       <View
@@ -26,42 +38,44 @@
           android:id="@+id/home_check"
           android:src="@mipmap/home_master_shape"
           android:layout_width="wrap_content"
-          android:layout_height="wrap_content" />
+          android:layout_height="match_parent" />
 
     </LinearLayout>
 
     <View
+        android:id="@+id/view2"
+        android:layout_below="@id/title_liner"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#c3c3c3"
-        >
+        />
 
-    </View>
 
 
     <FrameLayout
         android:id="@+id/home_frame"
         android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:layout_height="0dp">
+        android:layout_below="@id/view2"
+        android:layout_above="@id/main_view"
+        android:layout_height="match_parent">
 
     </FrameLayout>
-    
+
     <View
+        android:id="@+id/main_view"
+        android:layout_alignTop="@id/radiogroup"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#c3c3c3"
-        >
+    android:background="#c3c3c3"
+    />
 
-    </View>
 
     <RadioGroup
         android:id="@+id/radiogroup"
         android:layout_width="match_parent"
-        android:orientation="horizontal"
         android:layout_height="50dp"
-        android:layout_marginBottom="5dp"
-        >
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/home_teacher_btn"
@@ -74,82 +88,83 @@
             android:layout_weight="1"
             android:button="@null"
             android:drawableTop="@drawable/myselector"
-            android:gravity="center"
-            android:textColor="#c3c3c3"
-            android:textSize="8sp"
             android:fontFamily="sans-serif-thin"
-            android:text="名师" />
+            android:gravity="center"
+            android:text="名师"
+            android:textColor="#c3c3c3"
+            android:textSize="8sp" />
 
         <RadioButton
             android:id="@+id/home_woker_btn"
-            android:layout_marginTop="5dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="18sp"
             android:layout_marginRight="18sp"
-            android:textColor="#c3c3c3"
-            android:layout_width="0dp"
-            android:button="@null"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
+            android:button="@null"
             android:drawableTop="@drawable/myselector1"
-            android:text="作业"
-            android:gravity="center"
-            android:textSize="8sp"
             android:fontFamily="sans-serif-thin"
-            android:layout_height="match_parent" />
+            android:gravity="center"
+            android:text="作业"
+            android:textColor="#c3c3c3"
+            android:textSize="8sp" />
 
         <RadioButton
             android:id="@+id/home_book_btn"
-            android:layout_marginTop="5dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="18sp"
-            android:textColor="#c3c3c3"
             android:layout_marginRight="18sp"
-            android:layout_width="0dp"
-            android:button="@null"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
+            android:button="@null"
             android:drawableTop="@drawable/myselector2"
-            android:text="宝典"
-            android:gravity="center"
-            android:textSize="8sp"
             android:fontFamily="sans-serif-thin"
-            android:layout_height="match_parent" />
+            android:gravity="center"
+            android:text="宝典"
+            android:textColor="#c3c3c3"
+            android:textSize="8sp" />
 
         <RadioButton
+
             android:id="@+id/home_yugao_btn"
-            android:layout_marginTop="5dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="18sp"
             android:layout_marginRight="18sp"
-            android:layout_width="0dp"
-            android:button="@null"
-            android:textColor="#c3c3c3"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
+            android:button="@null"
             android:drawableTop="@drawable/myselector3"
-            android:text="预告"
-            android:gravity="center"
-            android:textSize="8sp"
             android:fontFamily="sans-serif-thin"
-            android:layout_height="match_parent" />
+            android:gravity="center"
+            android:text="预告"
+            android:textColor="#c3c3c3"
+            android:textSize="8sp" />
 
         <RadioButton
             android:id="@+id/home_mine_btn"
-            android:layout_marginTop="5dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="18sp"
             android:layout_marginRight="18sp"
-            android:layout_width="0dp"
-            android:textColor="#c3c3c3"
-            android:button="@null"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
+            android:button="@null"
             android:drawableTop="@drawable/myselector4"
-            android:text="我的"
-            android:gravity="center"
-            android:textSize="8sp"
             android:fontFamily="sans-serif-thin"
-            android:layout_height="match_parent" />
+            android:gravity="center"
+            android:text="我的"
+            android:textColor="#c3c3c3"
+            android:textSize="8sp" />
 
     </RadioGroup>
 
 
 
-</LinearLayout>
+</RelativeLayout>

@@ -1,12 +1,27 @@
 package com.example.lou.thewishofthestar.base;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.FrameLayout;
 
 import com.example.lou.thewishofthestar.R;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 public abstract class  BaseActivity extends AppCompatActivity {
 
@@ -18,7 +33,10 @@ public abstract class  BaseActivity extends AppCompatActivity {
         setContentView(getLayout());
         init();
         initLoad();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
     }
+
+
 
     protected abstract int getLayout();
 
@@ -63,4 +81,5 @@ public abstract class  BaseActivity extends AppCompatActivity {
         super.onStop();
         App.context = null;
     }
+
 }

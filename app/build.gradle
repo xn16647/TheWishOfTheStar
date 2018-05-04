@@ -37,4 +37,5 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.google.code.gson:gson:2.2.4'
+    implementation files('libs/BASE64.jar')
 }
