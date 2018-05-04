@@ -31,14 +31,5 @@ public class ValuableBookFragment extends BaseFragment {
 
     }
 
-    @Override
-    protected void showProgress() {
-
-    }
-
-    @Override
-    protected void hideProgress() {
-
-    }
 
 }

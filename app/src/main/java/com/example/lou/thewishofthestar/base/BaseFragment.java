@@ -29,7 +29,4 @@ public abstract class BaseFragment extends Fragment{
 
     protected abstract void initLoad();
 
-    protected abstract void showProgress();
-
-    protected abstract void hideProgress();
 }

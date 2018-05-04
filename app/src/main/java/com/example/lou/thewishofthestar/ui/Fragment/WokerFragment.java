@@ -28,14 +28,4 @@ public class WokerFragment extends BaseFragment {
 
     }
 
-    @Override
-    protected void showProgress() {
-
-    }
-
-    @Override
-    protected void hideProgress() {
-
-    }
-
 }

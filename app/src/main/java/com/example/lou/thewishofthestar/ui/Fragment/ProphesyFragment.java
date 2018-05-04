@@ -28,13 +28,4 @@ public class ProphesyFragment extends BaseFragment {
 
     }
 
-    @Override
-    protected void showProgress() {
-
-    }
-
-    @Override
-    protected void hideProgress() {
-
-    }
 }

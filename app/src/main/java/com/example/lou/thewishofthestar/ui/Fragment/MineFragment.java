@@ -28,15 +28,6 @@ public class MineFragment extends BaseFragment{
 
     }
 
-    @Override
-    protected void showProgress() {
-
-    }
-
-    @Override
-    protected void hideProgress() {
-
-    }
 
     @Override
     public void onHiddenChanged(boolean hidden) {
