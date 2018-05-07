@@ -5,6 +5,8 @@ import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +20,7 @@ import com.example.lou.thewishofthestar.model.bean.HomeEntity.HomeBean;
 import com.example.lou.thewishofthestar.model.bean.HomeEntity.HomewoksBean;
 import com.example.lou.thewishofthestar.network.StarWithService;
 import com.example.lou.thewishofthestar.presenter.HomePresenter;
+import com.example.lou.thewishofthestar.ui.Adapter.HomeAdapter;
 import com.example.lou.thewishofthestar.utils.HttpHelp;
 
 import java.util.List;
@@ -31,6 +34,7 @@ public class TeacherFragment extends BaseFragment implements HomeContract.View{
 
     private ProgressDialog progressDialog;
     private HomeContract.Presenter presenter;
+    private RecyclerView home_recyc;
 
     @Override
     protected int getLayoutId() {
@@ -39,7 +43,8 @@ public class TeacherFragment extends BaseFragment implements HomeContract.View{
 
     @Override
     protected void init() {
-
+        home_recyc = getView().findViewById(R.id.home_recyc);
+        home_recyc.setLayoutManager(new LinearLayoutManager(getContext()));
 
     }
 
@@ -54,11 +59,9 @@ public class TeacherFragment extends BaseFragment implements HomeContract.View{
 
     @Override
     public void showSuccees(HomeBean homeBean) {
-        DataBean data = homeBean.getData();
-        List<HomewoksBean> homewoks = data.getHomewoks();
-        String content = homewoks.get(0).getContent();
-        String message = homeBean.getMessage();
-        Toast.makeText(getContext(), content, Toast.LENGTH_SHORT).show();
+        HomeAdapter homeAdapter = new HomeAdapter(homeBean.getData(),getContext());
+        home_recyc.setAdapter(homeAdapter);
+
     }
 
     @Override

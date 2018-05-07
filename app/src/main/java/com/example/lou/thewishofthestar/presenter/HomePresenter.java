@@ -26,7 +26,6 @@ public class HomePresenter implements HomeContract.Presenter{
         HttpHelp.baseHttpRequest(context).create(StarWithService.class).getHomeData(HttpHelp.getUserId(context)).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(new Consumer<HomeBean>() {
             @Override
             public void accept(HomeBean homeBean) throws Exception {
-                String message = homeBean.getMessage();
                 view.showSuccees(homeBean);
                 view.hideProgress();
             }
