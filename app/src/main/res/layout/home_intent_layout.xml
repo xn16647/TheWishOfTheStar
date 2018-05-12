@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="15dp"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/find_teacher_btn"
+        android:layout_margin="12dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:drawableTop="@mipmap/home_master_find_shape"
+        android:text="找老师"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="8sp"
+        android:textColor="#c3c3c3"
+        android:background="#00000000"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/look_shape_btn"
+        android:layout_margin="12dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:drawableTop="@mipmap/home_master_look_shape"
+        android:text="线上课"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="8sp"
+        android:textColor="#c3c3c3"
+        android:background="#00000000"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/woker_shape_btn"
+        android:layout_margin="12dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:drawableTop="@mipmap/home_master_work_shape"
+        android:text="交作业"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="8sp"
+        android:textColor="#c3c3c3"
+        android:background="#00000000"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/chat_shape_btn"
+        android:layout_margin="10dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:drawableTop="@mipmap/home_master_chat_shape"
+        android:text="聊艺考"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="8sp"
+        android:textColor="#c3c3c3"
+        android:background="#00000000"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/learn_shape_btn"
+        android:layout_margin="12dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:drawableTop="@mipmap/home_master_learn_shape"
+        android:text="线下课"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="8sp"
+        android:textColor="#c3c3c3"
+        android:background="#00000000"
+        android:layout_height="wrap_content" />
+
+
+
+
+</LinearLayout>
