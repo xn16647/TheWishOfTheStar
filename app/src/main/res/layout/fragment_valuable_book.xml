@@ -22,6 +22,7 @@
                android:id="@+id/banner"
                app:layout_scrollFlags="scroll"></com.youth.banner.Banner>
 
+
             <com.androidkun.xtablayout.XTabLayout
                 android:id="@+id/tablay"
                 android:layout_width="match_parent"
