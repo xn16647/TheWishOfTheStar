@@ -8,12 +8,18 @@ import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,14 +31,19 @@ import com.example.lou.thewishofthestar.base.BaseActivity;
 import com.example.lou.thewishofthestar.contract.JobPartContract;
 import com.example.lou.thewishofthestar.model.bean.WokerMasterEntity.JobPartBean;
 import com.example.lou.thewishofthestar.presenter.JobPartPresenter;
+import com.example.lou.thewishofthestar.ui.Fragment.propheys.adapter.PropheysDetailsActivity;
 import com.example.lou.thewishofthestar.ui.Fragment.woker.adapter.JobPartAdapter;
 import com.squareup.picasso.Picasso;
+import com.umeng.socialize.UMAuthListener;
+import com.umeng.socialize.UMShareAPI;
+import com.umeng.socialize.bean.SHARE_MEDIA;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
-public class JobParticularsActivity extends BaseActivity implements JobPartContract.View{
+public class JobParticularsActivity extends BaseActivity implements JobPartContract.View, View.OnClickListener, RadioGroup.OnCheckedChangeListener {
 
     private ImageView exit;
     private ImageView share;
@@ -56,6 +67,35 @@ public class JobParticularsActivity extends BaseActivity implements JobPartContr
     private TextView wok_detail_num;
     private RelativeLayout wok_detail_aty_commen;
     private EditText edit;
+    private RadioButton share_weixin;
+    private RadioButton share_pengyouquan;
+    private RadioButton share_qq;
+    private RadioButton share_weibo;
+    private RadioButton share_fuzhi;
+    private Button cancel;
+    private RadioGroup share_rg;
+    private LinearLayout jobparticulars_linear;
+    private UMAuthListener umAuthListener = new UMAuthListener() {
+        @Override
+        public void onStart(SHARE_MEDIA platform) {
+            //授权开始的回调
+        }
+        @Override
+        public void onComplete(SHARE_MEDIA platform, int action, Map<String, String> data) {
+            Toast.makeText(getApplicationContext(), "Authorize succeed", Toast.LENGTH_SHORT).show();
+
+        }
+
+        @Override
+        public void onError(SHARE_MEDIA platform, int action, Throwable t) {
+            Toast.makeText( getApplicationContext(), "Authorize fail", Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        public void onCancel(SHARE_MEDIA platform, int action) {
+            Toast.makeText( getApplicationContext(), "Authorize cancel", Toast.LENGTH_SHORT).show();
+        }
+    };
     @Override
     protected int getLayout() {
         return R.layout.activity_job_particulars;
@@ -63,6 +103,7 @@ public class JobParticularsActivity extends BaseActivity implements JobPartContr
 
     @Override
     protected void init() {
+        jobparticulars_linear=findViewById(R.id.jobparticulars_linear);
          exit = findViewById(R.id.exit);
         share = findViewById(R.id.share);
         photo = findViewById(R.id.photo);
@@ -85,6 +126,9 @@ public class JobParticularsActivity extends BaseActivity implements JobPartContr
         wok_detail_num = findViewById(R.id.wok_detail_num);
         wok_detail_aty_commen = findViewById(R.id.wok_detail_aty_commen);
         edit = findViewById(R.id.edit);
+
+        exit.setOnClickListener(this);
+        share.setOnClickListener(this);
 
     }
 
@@ -160,5 +204,60 @@ public class JobParticularsActivity extends BaseActivity implements JobPartContr
     @Override
     public void Error(String e) {
         Toast.makeText(this, ""+e, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.exit:
+                finish();
+                break;
+            case R.id.share:
+                initPopupWindow();
+                break;
+        }
+    }
+
+    private void initPopupWindow() {
+        View view = LayoutInflater.from(this).inflate(R.layout.share_popuwin, null);
+        share_rg = view.findViewById(R.id.share_rg);
+        share_rg.setOnCheckedChangeListener(this);
+        share_weixin = view.findViewById(R.id.share_weixin);
+        share_pengyouquan = view.findViewById(R.id.share_pengyouquan);
+        share_qq = view.findViewById(R.id.share_QQ);
+        share_weibo = view.findViewById(R.id.share_weibo);
+        share_fuzhi = view.findViewById(R.id.share_fuzhi);
+
+        cancel = view.findViewById(R.id.cancel);
+        final PopupWindow popupWindow = new PopupWindow(view, ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        popupWindow.setFocusable(true);
+        popupWindow.setOutsideTouchable(false);
+        popupWindow.showAtLocation(jobparticulars_linear, Gravity.BOTTOM,0,0);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupWindow.dismiss();
+            }
+        });
+
+
+    }
+
+    @Override
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
+        switch (checkedId){
+            case R.id.share_weixin:
+                break;
+            case R.id.share_pengyouquan:
+                break;
+            case R.id.share_QQ:
+                UMShareAPI.get(this).getPlatformInfo(JobParticularsActivity.this, SHARE_MEDIA.QQ, umAuthListener);
+                break;
+            case R.id.share_weibo:
+                break;
+            case R.id.share_fuzhi:
+                break;
+
+        }
     }
 }
