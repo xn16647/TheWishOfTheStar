@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/jindou" />
+
+    <TextView
+        android:id="@+id/rv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_marginLeft="8dp"
+        android:textColor="#000"
+        android:textSize="10sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="font/sans-serif-thin"
+        android:text="10"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:background="@drawable/biank"
+        android:id="@+id/rv_money"
+        android:layout_width="60dp"
+        android:textSize="9sp"
+        android:gravity="center"
+        android:layout_height="20dp"
+        android:layout_marginEnd="24dp"
+        android:textColor="#1E90FF"
+        android:fontFamily="font/sans-serif-thin"
+        android:layout_marginRight="24dp"
+        android:text="￥1.0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/rv_num"
+        app:layout_constraintEnd_toEndOf="parent" />
+</android.support.constraint.ConstraintLayout>

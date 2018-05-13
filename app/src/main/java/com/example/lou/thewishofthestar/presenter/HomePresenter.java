@@ -2,7 +2,6 @@ package com.example.lou.thewishofthestar.presenter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.widget.Toast;
 
 import com.example.lou.thewishofthestar.contract.HomeContract;
 import com.example.lou.thewishofthestar.model.bean.HomeEntity.HomeBean;

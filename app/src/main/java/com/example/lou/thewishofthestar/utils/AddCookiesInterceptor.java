@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 
+import com.example.lou.thewishofthestar.base.App;
 import com.example.lou.thewishofthestar.data.Constant;
 
 import java.io.IOException;
@@ -12,9 +13,6 @@ import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
 
-/**
- * Created by vicoltree on 17/10/26.
- */
 
 public class AddCookiesInterceptor implements Interceptor {
 

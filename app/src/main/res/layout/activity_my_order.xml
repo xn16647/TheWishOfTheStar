@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCFCFC">
+
+    <TextView
+        android:id="@+id/order_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="26dp"
+        android:text="我的订单"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/order_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/register_return" />
+
+    <com.androidkun.xtablayout.XTabLayout
+        android:id="@+id/order_tab"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:background="#fff"
+
+        app:layout_constraintTop_toBottomOf="@id/order_back"
+        app:xTabDisplayNum="4"
+        app:xTabIndicatorColor="#ff0"
+
+        app:xTabSelectedTextSize="12sp"
+        app:xTabTextSize="10sp"
+
+        app:xTabIndicatorHeight="3dp"
+        app:xTabIndicatorWidth="20dp"
+        app:xTabTextSelectedBold="true">
+
+
+    </com.androidkun.xtablayout.XTabLayout>
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0.5dp"-->
+    <!--app:layout_constraintBottom_toTopOf="@id/order_tab"-->
+    <!--android:backgroundTint="#e5e5e5"/>-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0.5dp"-->
+    <!--app:layout_constraintTop_toBottomOf="@id/order_tab"-->
+    <!--android:backgroundTint="#e5e5e5"/>-->
+
+    <com.example.lou.thewishofthestar.ui.view.XViewPager
+        android:id="@+id/xviewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/order_tab">
+
+    </com.example.lou.thewishofthestar.ui.view.XViewPager>
+</android.support.constraint.ConstraintLayout>
