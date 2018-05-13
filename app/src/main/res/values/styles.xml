@@ -10,6 +10,17 @@
 
     <style name="AppTheme.Main" parent="AppTheme" />
 
+    <style name="cancle_bg_style">
 
+        <item name="android:drawableLeft">@mipmap/register_return</item>
+
+        <item name="android:gravity">center</item>
+
+        <item name="android:layout_centerVertical">true</item>
+
+        <item name="android:paddingLeft">15dp</item>
+
+        <item name="android:paddingRight">15dp</item>
+    </style>
 
 </resources>

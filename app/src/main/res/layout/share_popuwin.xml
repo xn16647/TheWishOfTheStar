@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:background="#faf6f6">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="分享给好友"
+        android:textSize="20sp"
+        android:textColor="#121111"
+        android:paddingLeft="10dp"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:id="@+id/share_rg">
+
+        <RadioButton
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:text="微信好友"
+        android:drawableTop="@mipmap/weixin"
+        android:gravity="center"
+        android:id="@+id/share_weixin"/>
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="朋友圈"
+            android:drawableTop="@mipmap/pengyouquan"
+            android:gravity="center"
+            android:id="@+id/share_pengyouquan"/>
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="QQ好友"
+            android:drawableTop="@mipmap/qq"
+            android:gravity="center"
+            android:id="@+id/share_QQ"/>
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="新浪微博"
+            android:drawableTop="@mipmap/weibo"
+            android:gravity="center"
+            android:id="@+id/share_weibo"/>
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="复制"
+            android:drawableTop="@mipmap/link"
+            android:gravity="center"
+            android:id="@+id/share_fuzhi"/>
+    </RadioGroup>
+
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        android:background="@drawable/yiyuan"
+        android:id="@+id/cancel"/>
+</LinearLayout>

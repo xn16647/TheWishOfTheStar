@@ -55,15 +55,15 @@
     <FrameLayout
         android:id="@+id/home_frame"
         android:layout_width="match_parent"
-        android:layout_below="@id/view2"
-        android:layout_above="@id/main_view"
+        android:layout_below="@+id/view2"
+        android:layout_above="@+id/main_view"
         android:layout_height="match_parent">
 
     </FrameLayout>
 
     <View
         android:id="@+id/main_view"
-        android:layout_alignTop="@id/radiogroup"
+        android:layout_alignTop="@+id/radiogroup"
         android:layout_width="match_parent"
         android:layout_height="1dp"
     android:background="#c3c3c3"

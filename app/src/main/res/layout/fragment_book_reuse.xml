@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/lin"
+    tools:context="com.example.lou.thewishofthestar.ui.Fragment.book.BookReuseFragment">
+
+   <android.support.v7.widget.RecyclerView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/recycler"
+       android:visibility="invisible"></android.support.v7.widget.RecyclerView>
+
+   <ImageView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@mipmap/empty_content"
+       android:layout_gravity="center"
+       android:id="@+id/image"/>
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="暂无内容"
+       android:textSize="20sp"
+       android:textColor="#1a1919"
+       android:layout_gravity="center"
+       android:layout_marginTop="15dp"
+       android:id="@+id/no"/>
+
+
+</LinearLayout>
