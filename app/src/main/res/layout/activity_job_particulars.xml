@@ -249,7 +249,12 @@
                 android:layout_height="wrap_content"
                 android:visibility="visible" />
 
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看更多评论"
+                android:layout_gravity="center"
+                android:gravity="center"/>
         </LinearLayout>
 
     </ScrollView>
