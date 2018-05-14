@@ -63,7 +63,6 @@ public class BookReuseFragment extends BaseFragment implements ValueBleBookContr
         Bundle bundle = getArguments();
         int rows = bundle.getInt("rows");
         int sortord = bundle.getInt("sortord");
-        Log.e("==",sortord+"");
         presenter = new BookBannerPresenter(this);
         presenter.loadData(getContext(),rows,sortord);
     }
@@ -77,7 +76,7 @@ public class BookReuseFragment extends BaseFragment implements ValueBleBookContr
     public void showBookdata(BookMasterBean bookMasterBean) {
 
         List<BookMasterBean.DataBean.ArtcircleListBean.ListBean> mlist = bookMasterBean.getData().getArtcircleList().getList();
-
+        Log.e("tag",bookMasterBean.getData().getArtcircleList().getList().get(0).getNickname());
         if(bookMasterBean.getData().getArtcircleCategories() == null){
             recycler.setVisibility(View.GONE);
             image.setVisibility(View.VISIBLE);

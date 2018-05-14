@@ -20,9 +20,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.Fragment.woker.JobParticularsActivity" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name=".ui.Fragment.woker.JobParticularsActivity" android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
         <activity android:name=".ui.Fragment.propheys.adapter.PropheysDetailsActivity" />
-        <activity android:name=".ui.Fragment.book.BookDetailsActivity" android:windowSoftInputMode="adjustNothing"></activity>
+        <activity android:name=".ui.Fragment.book.BookDetailsActivity" ></activity>
 
         <activity
             android:name="com.umeng.qq.tencent.AuthActivity"

@@ -140,7 +140,7 @@ public class JobParticularsActivity extends BaseActivity implements JobPartContr
 
 
 
-       edit.setOnClickListener(new View.OnClickListener() {
+     /*  edit.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
                edit.setFocusable(true);
@@ -149,7 +149,7 @@ public class JobParticularsActivity extends BaseActivity implements JobPartContr
                InputMethodManager inputManager = (InputMethodManager)edit.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
                inputManager.showSoftInput(edit, 0);
            }
-       });
+       });*/
     }
 
     @Override

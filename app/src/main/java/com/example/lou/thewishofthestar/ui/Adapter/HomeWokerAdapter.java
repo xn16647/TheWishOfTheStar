@@ -33,7 +33,6 @@ public class HomeWokerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.home_woker_item, parent, false);
         WokerHolder holder = new WokerHolder(view);
-
         return holder;
     }
 
