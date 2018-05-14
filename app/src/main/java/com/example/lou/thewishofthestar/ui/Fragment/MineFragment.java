@@ -26,6 +26,7 @@ import com.example.lou.thewishofthestar.ui.Activity.MainActivity;
 import com.example.lou.thewishofthestar.ui.Activity.MyIdentification;
 import com.example.lou.thewishofthestar.ui.Activity.MyOrderActivity;
 import com.example.lou.thewishofthestar.ui.Activity.RegisterActivity;
+import com.example.lou.thewishofthestar.ui.Activity.SettingActivity;
 
 import java.nio.channels.FileChannel;
 
@@ -149,6 +150,9 @@ public class MineFragment extends BaseFragment implements MineContract.View {
             case R.id.mine_chat:
                 break;
             case R.id.mine_setting:
+                if(flag){
+                    startActivity(new Intent(getContext(), SettingActivity.class));
+                }
                 break;
             case R.id.unLogin_head:
                 break;
