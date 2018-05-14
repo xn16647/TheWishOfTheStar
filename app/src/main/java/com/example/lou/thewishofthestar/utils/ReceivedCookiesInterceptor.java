@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.text.TextUtils;
 
 
+import com.example.lou.thewishofthestar.base.App;
 import com.example.lou.thewishofthestar.data.Constant;
 
 import java.io.IOException;

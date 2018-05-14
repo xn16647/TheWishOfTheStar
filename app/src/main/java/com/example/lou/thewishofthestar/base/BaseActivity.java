@@ -23,6 +23,8 @@ import com.example.lou.thewishofthestar.R;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
+import butterknife.ButterKnife;
+
 public abstract class  BaseActivity extends AppCompatActivity {
 
     private BaseFragment lastFragment;
@@ -31,6 +33,7 @@ public abstract class  BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         App.context = this;
         setContentView(getLayout());
+        ButterKnife.bind(this);
         init();
         initLoad();
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
@@ -77,9 +80,14 @@ public abstract class  BaseActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStop() {
-        super.onStop();
+    protected void onPause() {
+        super.onPause();
         App.context = null;
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        App.context = this;
+    }
 }

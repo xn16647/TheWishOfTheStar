@@ -191,9 +191,9 @@ public class HttpHelp {
     }
 
     public static void glideLoadC(Context context, final ImageView imgview, String url, int defualt){
-       if(context==null||imgview==null){
-           return;
-       }
+        if(context==null||imgview==null){
+            return;
+        }
 
         Glide.with(context)
                 .load(url)
@@ -305,14 +305,14 @@ public class HttpHelp {
 
     public static boolean isNetworkConnected(Context context) {
         if (context != null) {
-             ConnectivityManager mConnectivityManager = (ConnectivityManager) context
-             .getSystemService(Context.CONNECTIVITY_SERVICE);
-             NetworkInfo mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
-             if (mNetworkInfo != null) {
+            ConnectivityManager mConnectivityManager = (ConnectivityManager) context
+                    .getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
+            if (mNetworkInfo != null) {
                 return mNetworkInfo.isAvailable();
-             }
-             }
-         return false;
+            }
         }
+        return false;
+    }
 
 }

@@ -18,7 +18,7 @@ import com.example.lou.thewishofthestar.ui.Fragment.ValuableBookFragment;
 import com.example.lou.thewishofthestar.ui.Fragment.WokerFragment;
 
 
-public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener {
+public class   MainActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener {
 
 
     private FrameLayout home_frame;

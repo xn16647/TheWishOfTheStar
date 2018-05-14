@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/register_return" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="45dp"
+        android:fontFamily="font/sans-serif-thin"
+        android:text="输入手机号，快速注册"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/register_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:background="@null"
+        android:fontFamily="font/sans-serif-thin"
+        android:hint="输入手机号"
+        android:textColor="#eeeee5"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="15dp"
+        android:background="#eeeee5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp">
+
+        <EditText
+            android:id="@+id/register_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:fontFamily="font/sans-serif-thin"
+            android:hint="输入验证码"
+            android:textColor="#eeeee5"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/register_getCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="font/sans-serif-thin"
+            android:text="获取验证码"
+            android:textColor="@color/colorPrimary"
+            android:textSize="8sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="15dp"
+        android:background="#eeeee5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="font/sans-serif-thin"
+            android:text="注册表示你同意"
+            android:textColor="#c3c3c3"
+            android:textSize="8sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="font/sans-serif-thin"
+            android:text="UnivStar服务使用协议"
+            android:textColor="#000"
+            android:textSize="8sp" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="40dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/btn_bian"
+        android:text="注册"
+        android:textColor="#fff" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/weixin_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/weixin"
+            android:fontFamily="font/sans-serif-thin"
+            android:gravity="center"
+            android:text="微信登陆"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/qq_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/qq"
+            android:fontFamily="font/sans-serif-thin"
+            android:gravity="center"
+            android:text="QQ登陆"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/weibo_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/weibo"
+            android:fontFamily="font/sans-serif-thin"
+            android:gravity="center"
+            android:text="微博登陆"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

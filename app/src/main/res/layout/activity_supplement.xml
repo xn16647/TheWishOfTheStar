@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/sup_photo"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_message"
+        app:srcCompat="@mipmap/user_head_portrait" />
+
+
+    <TextView
+        android:id="@+id/user_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="97dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:textSize="14sp"
+        android:layout_marginTop="40dp"
+        android:text="完善信息"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radio"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/sup_name"
+        android:layout_height="40dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"/>
+
+
+        <RadioButton
+            android:id="@+id/boy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:button="@drawable/complete_userinfo_check_man"
+            android:textColor="@drawable/complete_userinfo_check_woman_tv"
+            android:text="我是男神" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/girl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@drawable/complete_userinfo_check_woman"
+            android:textColor="@drawable/complete_userinfo_check_man_tv"
+            android:text="我是女神" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"/>
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/sup_name"
+        android:layout_width="match_parent"
+        android:background="@null"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textSize="14sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:hint="请输入昵称"
+        app:layout_constraintBottom_toTopOf="@+id/radio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sup_photo" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="0.5dp"
+        app:layout_constraintTop_toBottomOf="@id/sup_name"
+        android:background="#eeeee5"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="0.5dp"
+        app:layout_constraintTop_toBottomOf="@id/sup_psw"
+        android:background="#eeeee5"
+        />
+
+
+    <EditText
+        android:id="@+id/sup_psw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@null"
+        android:hint="密码"
+        android:inputType="textPassword"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio"
+        app:layout_constraintVertical_bias="0.159" />
+
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/sup_psw"
+        android:id="@+id/supplement_btn"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_height="40dp"
+        android:textColor="#fff"
+        android:text="完成"
+        android:background="@drawable/btn_bian"
+        />
+
+    <ImageView
+        android:id="@+id/sup_photo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="45dp"
+        app:layout_constraintBottom_toTopOf="@id/sup_photo"
+        app:layout_constraintTop_toBottomOf="@id/sup_photo"
+        app:layout_constraintRight_toLeftOf="@id/sup_photo"
+        app:layout_constraintLeft_toRightOf="@id/sup_photo"
+        app:srcCompat="@mipmap/ic_camera"
+         />
+
+
+</android.support.constraint.ConstraintLayout>

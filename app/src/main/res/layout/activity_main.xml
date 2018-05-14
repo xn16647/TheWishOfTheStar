@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:visibility="gone"
         android:src="@mipmap/myself_head_bg"
-        android:layout_height="200dp"/>
+        android:layout_height="175dp"/>
 
     <LinearLayout
         android:layout_alignParentTop="true"

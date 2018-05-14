@@ -4,8 +4,7 @@
     android:id="@+id/home_masterwork_list_item_group"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:descendantFocusability="blocksDescendants"
-    android:orientation="vertical">
+    android:descendantFocusability="blocksDescendants">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -385,7 +384,6 @@
         </LinearLayout>
 
     </LinearLayout>
-
 
 
 </LinearLayout>
