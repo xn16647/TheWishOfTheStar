@@ -63,7 +63,7 @@ public class ValuableBookFragment extends BaseFragment implements ValueBleBookCo
     protected void initLoad() {
         if (isNetWorkAvaliable(getContext())){
             presenter = new BookBannerPresenter(this);
-            presenter.loadData(getContext(),20,0);
+            presenter.loadData(getContext(),20,1);
             book_linear.setVisibility(View.GONE);
         }else{
             book_linear.setVisibility(View.VISIBLE);

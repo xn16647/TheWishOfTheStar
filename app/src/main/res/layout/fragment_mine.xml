@@ -67,7 +67,7 @@
             android:layout_marginBottom="65dp"
             android:layout_marginTop="290dp"
             android:text="登录后，享受更多精彩服务"
-            app:fontFamily="font/sans-serif-thin"
+            android:fontFamily="font/sans-serif-thin"
             app:layout_constraintBottom_toTopOf="@+id/unLogin_btn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -83,7 +83,7 @@
             android:background="#FFD700"
             android:text="登陆"
             android:textColor="#fff"
-            app:fontFamily="font/sans-serif-thin"
+            android:fontFamily="font/sans-serif-thin"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/unRegister_btn"
             app:layout_constraintTop_toBottomOf="@+id/mine_textview" />
@@ -98,7 +98,7 @@
             android:text="注册"
             android:textAllCaps="false"
             android:textColor="#ffffff"
-            app:fontFamily="font/sans-serif-thin"
+            android:fontFamily="font/sans-serif-thin"
             app:layout_constraintBaseline_toBaselineOf="@id/unLogin_btn"
             app:layout_constraintDimensionRatio="H,1:3.5"
             app:layout_constraintLeft_toRightOf="@id/unLogin_btn"
@@ -136,7 +136,7 @@
             android:text="TextView"
             android:textColor="#fff"
             android:textSize="14sp"
-            app:fontFamily="font/sans-serif-thin"
+            android:fontFamily="font/sans-serif-thin"
             app:layout_constraintStart_toEndOf="@+id/useful_default_userimg"
             app:layout_constraintTop_toTopOf="@+id/useful_default_userimg" />
 
@@ -150,7 +150,7 @@
             android:text="我的信息"
             android:textColor="#fff"
             android:textSize="12sp"
-            app:fontFamily="font/sans-serif-thin"
+            android:fontFamily="font/sans-serif-thin"
             app:layout_constraintBottom_toBottomOf="@+id/useful_default_userimg"
             app:layout_constraintStart_toEndOf="@+id/useful_default_userimg" />
 
@@ -166,7 +166,7 @@
             android:text="作品"
             android:textColor="@color/gray"
             android:textSize="10sp"
-            app:fontFamily="font/sans-serif-thin"
+            android:fontFamily="font/sans-serif-thin"
             app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
             app:layout_constraintHorizontal_weight="1"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -182,7 +182,7 @@
             android:text="帖子"
             android:textColor="@color/gray"
             android:textSize="10sp"
-            app:fontFamily="font/sans-serif-thin"
+            android:fontFamily="font/sans-serif-thin"
             app:layout_constraintBaseline_toBaselineOf="@+id/textView14"
             app:layout_constraintHorizontal_weight="1"
             app:layout_constraintLeft_toRightOf="@id/textView12"
@@ -198,7 +198,7 @@
             android:text="关注"
             android:textColor="@color/gray"
             android:textSize="10sp"
-            app:fontFamily="font/sans-serif-thin"
+            android:fontFamily="font/sans-serif-thin"
             app:layout_constraintBaseline_toBaselineOf="@+id/textView15"
             app:layout_constraintHorizontal_weight="1"
             app:layout_constraintLeft_toRightOf="@id/textView13"
@@ -215,7 +215,7 @@
             android:text="粉丝"
             android:textColor="@color/gray"
             android:textSize="10sp"
-            app:fontFamily="font/sans-serif-thin"
+            android:fontFamily="font/sans-serif-thin"
             app:layout_constraintHorizontal_weight="1"
             app:layout_constraintLeft_toRightOf="@id/textView14"
             app:layout_constraintRight_toRightOf="parent"
@@ -232,7 +232,7 @@
             android:text="0"
             android:textColor="@color/colorPrimary"
             android:textSize="10sp"
-            app:fontFamily="font/sans-serif-thin"
+            android:fontFamily="font/sans-serif-thin"
             app:layout_constraintBottom_toTopOf="@id/textView12"
             app:layout_constraintHorizontal_weight="1"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -248,7 +248,7 @@
             android:text="1"
             android:textColor="@color/colorPrimary"
             android:textSize="10sp"
-            app:fontFamily="font/sans-serif-thin"
+            android:fontFamily="font/sans-serif-thin"
             app:layout_constraintBottom_toTopOf="@id/textView13"
             app:layout_constraintHorizontal_weight="1"
             app:layout_constraintLeft_toRightOf="@id/useful_opus"
@@ -264,7 +264,7 @@
             android:text="1"
             android:textColor="@color/colorPrimary"
             android:textSize="10sp"
-            app:fontFamily="font/sans-serif-thin"
+            android:fontFamily="font/sans-serif-thin"
             app:layout_constraintBottom_toTopOf="@id/textView14"
             app:layout_constraintHorizontal_weight="1"
             app:layout_constraintLeft_toRightOf="@id/useful_invitation"
@@ -280,7 +280,7 @@
             android:text="2"
             android:textColor="@color/colorPrimary"
             android:textSize="10sp"
-            app:fontFamily="font/sans-serif-thin"
+            android:fontFamily="font/sans-serif-thin"
             app:layout_constraintBottom_toTopOf="@id/textView15"
             app:layout_constraintHorizontal_weight="1"
             app:layout_constraintLeft_toRightOf="@id/useful_follow"
@@ -431,7 +431,7 @@
                 android:layout_margin="5dp"
                 android:text="充值中心"
                 android:textSize="12sp"
-                app:fontFamily="font/sans-serif-thin" />
+                android:fontFamily="font/sans-serif-thin" />
 
             <TextView
                 android:layout_width="0dp"
@@ -453,7 +453,7 @@
                 android:layout_marginRight="10dp"
                 android:text="0"
                 android:textSize="10sp"
-                app:fontFamily="font/sans-serif-thin" />
+                android:fontFamily="font/sans-serif-thin" />
 
             <ImageView
                 android:id="@+id/imageView22"
@@ -491,7 +491,7 @@
                 android:layout_margin="5dp"
                 android:text="我的收藏"
                 android:textSize="12sp"
-                app:fontFamily="font/sans-serif-thin" />
+                android:fontFamily="font/sans-serif-thin" />
 
             <TextView
                 android:layout_width="0dp"
@@ -527,7 +527,7 @@
                 android:layout_margin="5dp"
                 android:text="我的偏好"
                 android:textSize="12sp"
-                app:fontFamily="font/sans-serif-thin" />
+                android:fontFamily="font/sans-serif-thin" />
 
             <TextView
                 android:layout_width="0dp"
@@ -579,7 +579,7 @@
                 android:layout_margin="5dp"
                 android:text="我要认证"
                 android:textSize="12sp"
-                app:fontFamily="font/sans-serif-thin" />
+                android:fontFamily="font/sans-serif-thin" />
 
             <TextView
                 android:layout_width="0dp"
@@ -593,7 +593,7 @@
                 android:text="未认证"
                 android:textColor="#ff0000"
                 android:textSize="8sp"
-                app:fontFamily="font/sans-serif-thin" />
+                android:fontFamily="font/sans-serif-thin" />
 
 
             <ImageView
@@ -623,13 +623,13 @@
                 android:layout_margin="5dp"
                 android:text="礼物中心"
                 android:textSize="12sp"
-                app:fontFamily="font/sans-serif-thin" />
+                android:fontFamily="font/sans-serif-thin" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
 
-                android:layout_weight="1" />
+                android:layout_weight="1"/>
 
 
             <ImageView

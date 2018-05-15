@@ -6,7 +6,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.lou.thewishofthestar.ui.Fragment.book.BookDetailsActivity">
-<LinearLayout
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:layout_weight="1"
@@ -75,25 +79,7 @@
                 android:text="asdasd"
                 android:layout_marginLeft="10dp"/>
         </LinearLayout>
-        <LinearLayout
-            android:id="@+id/linear_b"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp">
-            <View
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="0dp"></View>
-            <Button
-                android:layout_width="80dp"
-                android:layout_height="30dp"
-                android:textColor="#1109e4"
-                android:text="经验分享"
-                android:background="@drawable/yiyuan"
-                android:id="@+id/contentType"
-                android:gravity="center"/>
-        </LinearLayout>
+
     </LinearLayout>
 
 <TextView
@@ -198,18 +184,115 @@
         android:id="@+id/recycler"/>
 </LinearLayout>
 
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/xianshi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="寫評論"
+            android:id="@+id/pinglun"
+            android:background="@drawable/bian"/>
+
+        <CheckBox
+            android:id="@+id/collect"
+            android:layout_width="wrap_content"
+            android:button="@drawable/shouchang"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:textColor="@drawable/detailpraise_check_tv_bg"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"/>
+        <RelativeLayout
+            android:id="@+id/wok_detail_aty_comment_group"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/wok_detail_aty_comment_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/work_detail_comment" />
+
+            <TextView
+                android:id="@+id/wok_detail_aty_comment_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="-8dp"
+                android:layout_marginTop="-5dp"
+                android:layout_toRightOf="@id/wok_detail_aty_comment_btn"
+                android:text="0"
+                android:textColor="@color/blue_arlt"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wok_detail_aty_commen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/wok_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/work_detail_praise_normal" />
+
+            <TextView
+                android:id="@+id/wok_detail_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="-8dp"
+                android:layout_marginTop="-5dp"
+                android:layout_toRightOf="@id/wok_detail"
+                android:text="0"
+                android:textColor="@color/blue_arlt"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="5dp">
+        android:visibility="gone"
+        android:id="@+id/yinchang">
 
         <EditText
+            android:id="@+id/edit"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:hint="写评论"/>
+            android:hint="写评论"
+            android:background="@drawable/bian"/>
 
-
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="發送"
+            android:id="@+id/fasong"
+            android:visibility="gone"/>
     </LinearLayout>
 </LinearLayout>

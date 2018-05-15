@@ -1,6 +1,8 @@
 package com.example.lou.thewishofthestar.ui.Fragment.propheys.adapter;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +18,8 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
@@ -28,8 +32,11 @@ import com.example.lou.thewishofthestar.R;
 import com.example.lou.thewishofthestar.base.BaseActivity;
 import com.example.lou.thewishofthestar.contract.DetailsContract;
 import com.example.lou.thewishofthestar.data.Constant;
+import com.example.lou.thewishofthestar.model.bean.ProphesyEntity.CollectBean;
 import com.example.lou.thewishofthestar.model.bean.ProphesyEntity.DetailsBean;
+import com.example.lou.thewishofthestar.network.StarWithService;
 import com.example.lou.thewishofthestar.presenter.DetailsPresenter;
+import com.example.lou.thewishofthestar.ui.Activity.LoginActivity;
 import com.example.lou.thewishofthestar.utils.HttpHelp;
 import com.squareup.picasso.Picasso;
 import com.umeng.socialize.UMAuthListener;
@@ -40,7 +47,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 
-public class PropheysDetailsActivity extends BaseActivity implements DetailsContract.View, View.OnClickListener, RadioGroup.OnCheckedChangeListener {
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
+
+public class PropheysDetailsActivity extends BaseActivity implements DetailsContract.View, View.OnClickListener, RadioGroup.OnCheckedChangeListener, CompoundButton.OnCheckedChangeListener {
 
 
     private ImageView coverImg;
@@ -52,7 +64,7 @@ public class PropheysDetailsActivity extends BaseActivity implements DetailsCont
     private TextView address;
     private TextView price;
     private WebView web;
-    private RadioButton collect;
+    private CheckBox collect;
     private TextView phone;
     private TextView order;
     private DetailsBean.DataBean data;
@@ -109,8 +121,8 @@ public class PropheysDetailsActivity extends BaseActivity implements DetailsCont
         phone.setOnClickListener(this);
         recede.setOnClickListener(this);
         share.setOnClickListener(this);
-
-
+        collect.setOnCheckedChangeListener(this);
+        order.setOnClickListener(this);
     }
 
     @Override
@@ -168,6 +180,9 @@ public class PropheysDetailsActivity extends BaseActivity implements DetailsCont
             case R.id.share:
                 initPopupWindow();
                 break;
+            case R.id.order:
+
+                break;
         }
     }
 
@@ -220,6 +235,48 @@ public class PropheysDetailsActivity extends BaseActivity implements DetailsCont
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data);
+
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        SharedPreferences loginState = getSharedPreferences("loginState", Context.MODE_PRIVATE);
+        boolean flag = loginState.getBoolean("flag", false);
+        if(flag){
+            if(isChecked){
+                favorite();
+            }else{
+                Canclefavorite();
+            }
+        }else{
+            startActivity(new Intent(PropheysDetailsActivity.this, LoginActivity.class));
+        }
+    }
+
+    private void favorite(){
+        HttpHelp.baseHttpRequest(this).create(StarWithService.class).getPropCollData(data.getId(),HttpHelp.getUserId(this),"体验课").subscribeOn(Schedulers.newThread()).observeOn(AndroidSchedulers.mainThread()).subscribe(new Consumer<CollectBean>() {
+            @Override
+            public void accept(CollectBean collectBean) throws Exception {
+                if(collectBean.getCode()==0){
+                    collect.setChecked(true);
+                    Log.e("TAG",collectBean.getCode()+"");
+                }
+
+            }
+        });
+
+    }
+
+    private void Canclefavorite(){
+        HttpHelp.baseHttpRequest(this).create(StarWithService.class).getPropCancleCollData(data.getId(),HttpHelp.getUserId(this),"体验课").subscribeOn(Schedulers.newThread()).observeOn(AndroidSchedulers.mainThread()).subscribe(new Consumer<CollectBean>() {
+            @Override
+            public void accept(CollectBean collectBean) throws Exception {
+                if(collectBean.getCode()==0){
+                    collect.setChecked(false);
+                    Log.e("TAG",collectBean.getMessage());
+                }
+            }
+        });
 
     }
 }

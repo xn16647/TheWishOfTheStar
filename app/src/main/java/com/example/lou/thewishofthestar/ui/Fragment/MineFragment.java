@@ -1,6 +1,7 @@
 package com.example.lou.thewishofthestar.ui.Fragment;
 
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -225,12 +226,15 @@ public class MineFragment extends BaseFragment implements MineContract.View {
         Toast.makeText(getContext(), e, Toast.LENGTH_SHORT).show();
     }
 
+    @SuppressLint("WrongConstant")
     @Override
     public void showLogined() {
+
         usefulLoginedLayout.setVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
         gologinLayout.setVisibility(View.GONE);
     }
 
+    @SuppressLint("WrongConstant")
     @Override
     public void showUnLogin() {
         gologinLayout.setVisibility(View.SYSTEM_UI_FLAG_VISIBLE);

@@ -1,11 +1,16 @@
 package com.example.lou.thewishofthestar.ui.Activity;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.example.lou.thewishofthestar.R;
@@ -16,6 +21,7 @@ import com.example.lou.thewishofthestar.model.bean.MineBean.ListBean;
 import com.example.lou.thewishofthestar.model.bean.MineBean.StarDou;
 import com.example.lou.thewishofthestar.presenter.ChongPresenter;
 
+import org.byteam.superadapter.OnItemClickListener;
 import org.byteam.superadapter.SuperAdapter;
 import org.byteam.superadapter.SuperViewHolder;
 
@@ -70,10 +76,19 @@ public class ChongZhiActivity extends BaseActivity implements ChongContract.View
             public void onBind(SuperViewHolder holder, int viewType, int layoutPosition, ListBean item) {
                 holder.setText(R.id.rv_money,"￥"+item.getPriceAndroid()+".0");
                 holder.setText(R.id.rv_num,item.getAmountAndroid()+"");
+
+
             }
         };
 
         chongRecyc.setAdapter(superAdapter);
+        superAdapter.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(View itemView, int viewType, int position) {
 
+            }
+        });
     }
+
+
 }

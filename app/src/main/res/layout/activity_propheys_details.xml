@@ -191,15 +191,17 @@
         android:orientation="horizontal"
         android:background="#f9f3f3"
         android:gravity="center">
-    <RadioButton
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="match_parent"
-        android:id="@+id/collect"
-        android:button="@null"
-        android:drawableTop="@drawable/shouchang"
-        android:layout_gravity="center"
-        android:gravity="center"/>
+
+        <CheckBox
+            android:id="@+id/collect"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:button="@drawable/shouchang"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:textColor="@drawable/detailpraise_check_tv_bg"
+            android:gravity="center"/>
+
 
         <TextView
             android:layout_width="0dp"
@@ -213,7 +215,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="预约已满"
+            android:text="预约"
             android:background="#0e38c1"
             android:gravity="center"
             android:id="@+id/order"

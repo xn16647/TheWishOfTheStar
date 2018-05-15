@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin:'com.android.application'
 
 android {
     compileSdkVersion 27
@@ -46,5 +46,5 @@ dependencies {
     implementation 'com.jakewharton:butterknife:8.8.1'
     implementation 'com.androidkun:XTabLayout:1.1.3'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-
+    implementation files('libs/alipaySdk-20180403.jar')
 }

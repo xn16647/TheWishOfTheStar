@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.Design.Light.NoActionBar">
         <activity android:name=".ui.Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,6 +42,16 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".ui.Activity.SettingActivity" />
+        <activity android:name=".ui.Activity.RegisterActivity" />
+        <activity android:name=".ui.Activity.MyIdentification" />
+        <activity android:name=".ui.Activity.ChongZhiActivity" />
+        <activity android:name=".ui.Activity.MyOrderActivity" />
+        <activity android:name=".ui.Activity.LoginActivity" />
+        <activity android:name=".ui.Activity.SupplementActivity" />
+
+
+
 
         <meta-data
             android:name="UMENG_APPKEY"

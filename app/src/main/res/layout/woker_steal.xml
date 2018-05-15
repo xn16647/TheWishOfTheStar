@@ -129,13 +129,25 @@
         android:orientation="horizontal"
         android:layout_marginTop="10dp"
         android:gravity="center">
-
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="center">
         <ImageView
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/reply_normal"
             android:id="@+id/comment"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:id="@+id/comment_num"
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
         <LinearLayout
         android:layout_width="0dp"
         android:layout_weight="1"
@@ -171,13 +183,7 @@
                 android:src="@mipmap/reward_active"
                 android:id="@+id/reward"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="7"
-                android:id="@+id/reward_num"
-                android:textSize="15sp"
-                android:layout_marginLeft="5dp"/>
+
         </LinearLayout>
 
         <ImageView

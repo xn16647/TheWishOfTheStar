@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:descendantFocusability="blocksDescendants"
     android:orientation="vertical"
     android:id="@+id/jobparticulars_linear"
     tools:context="com.example.lou.thewishofthestar.ui.Fragment.woker.JobParticularsActivity">
@@ -190,7 +189,8 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/zanshang"
                     android:text="赞赏"
-                    android:textColor="#f7f0f0" />
+                    android:textColor="#f7f0f0"
+                    android:id="@+id/woker_reward"/>
             </LinearLayout>
 
             <View
@@ -260,19 +260,20 @@
     </ScrollView>
 
     <LinearLayout
+        android:id="@+id/xianshi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
         android:padding="5dp">
-
-        <EditText
-            android:id="@+id/edit"
+        <TextView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/yiyuan"
-            android:hint="写评论" />
+            android:layout_height="wrap_content"
+            android:text="寫評論"
+            android:id="@+id/pinglun"
+            android:background="@drawable/bian"/>
+
 
         <RelativeLayout
             android:id="@+id/wok_detail_aty_comment_group"
@@ -329,6 +330,32 @@
                 android:textSize="12sp" />
 
         </RelativeLayout>
+
+
+
+
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:id="@+id/yinchang">
+
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="写评论"
+            android:background="@drawable/bian"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="發送"
+            android:id="@+id/fasong"
+            android:visibility="gone"/>
+    </LinearLayout>
 </LinearLayout>

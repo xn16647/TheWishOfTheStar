@@ -1,10 +1,12 @@
 package com.example.lou.thewishofthestar.network;
 
 import com.example.lou.thewishofthestar.model.bean.BookEntity.BookMasterBean;
+import com.example.lou.thewishofthestar.model.bean.BookEntity.ParticularsBookBean;
 import com.example.lou.thewishofthestar.model.bean.HomeEntity.HomeBean;
 import com.example.lou.thewishofthestar.model.bean.MineBean.MineData;
 import com.example.lou.thewishofthestar.model.bean.MineBean.StarDou;
 import com.example.lou.thewishofthestar.model.bean.MineBean.UserInfo;
+import com.example.lou.thewishofthestar.model.bean.ProphesyEntity.CollectBean;
 import com.example.lou.thewishofthestar.model.bean.ProphesyEntity.DetailsBean;
 import com.example.lou.thewishofthestar.model.bean.ProphesyEntity.ProphesyBean;
 import com.example.lou.thewishofthestar.model.bean.WokerMasterEntity.JobPartBean;
@@ -101,6 +103,19 @@ public interface StarWithService {
     @POST("/v1/m/homewok/detail")
     Observable<JobPartBean> getJobPartData(@Field("loginUserId")Integer loginUserId, @Field("homewokId")Integer homewokId);
 
+    //预告收藏
+    @FormUrlEncoded
+    @POST("/v1/m/user/favorite")
+    Observable<CollectBean> getPropCollData(@Field("id")Integer id,@Field("loginUserId")Integer loginUserId, @Field("type")String type);
 
 
+    //取消预告收藏
+    @FormUrlEncoded
+    @POST("/v1/m/user/favorite/cancel")
+    Observable<CollectBean> getPropCancleCollData(@Field("id")Integer id,@Field("loginUserId")Integer loginUserId, @Field("type")String type);
+
+    //宝典详情页面
+    @FormUrlEncoded
+    @POST("/v1/m/artcircle/detail")
+    Observable<ParticularsBookBean> getParticularsBookData(@Field("id")Integer id, @Field("loginUserId")Integer loginUserId);
 }
